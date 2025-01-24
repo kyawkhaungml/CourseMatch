@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transcation Completed</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href = "stylemenu.css">
+    </head>
+
+    <body>
+         <div class="top">
+            <h1>CourseMatch</h1>
+            <div class="navigate">
+                <table class="ntable">
+                    <tr>
+                        <td class = "ndata">
+                            <a href = "about.html">About</a>
+                        </td>
+                        <td class = "ndata">
+                            <a href = "menu.html">Menu</a>
+                        </td>
+                        <td class = "ndata">
+                            <a href = "cart.html">Cart</a>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+
+        <div class = "complete">
+            <center><h1>Payment Successful! We Will Send You The Tools To Access Your Courses Via Email!</h1></center>
+            <center><button class = "redirect-menu" onclick="redirect_menu()">Go Back to Menu</button> </center>
+            <script>
+                function redirect_menu(){
+                    window.location.href = "menu.html";
+                }
+            </script>
+        </div>
+    </body>
+</html>

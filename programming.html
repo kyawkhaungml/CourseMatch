@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction to Programming</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href = "stylemenu.css">
+    </head>
+
+    <body>
+        <div class="top">
+            <h1>CourseMatch</h1>
+            <div class="navigate">
+                <table class="ntable">
+                    <tr>
+                        <td class = "ndata">
+                            <a href = "about.html">About</a>
+                        </td>
+                        <td class = "ndata">
+                            <a href = "menu.html">Menu</a>
+                        </td>
+                        <td class = "ndata">
+                            <a href = "cart.html">Cart</a>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+        <center><h1>Introduction to Programming</h1></center>
+        
+        <div class = "content">
+            <center><h2>Description</h2></center>
+            <p>Welcome to the exciting world of programming! In this introductory course, we'll embark on a journey to demystify the art and science of coding. Programming is the process of instructing computers to perform tasks through a set of precise instructions, known as code.
+
+Throughout this course, you will gain a solid understanding of fundamental programming concepts, laying the groundwork for a rewarding and dynamic skill set. We'll cover topics such as:</p>
+<ol>
+            <li><b>Programming Foundations:</b>Explore the basic principles that form the backbone of programming, including variables, data types, and the logic behind creating efficient algorithms.</li>
+            <li><b>Problem Solving:</b>Learn how to approach problems systematically and break them down into manageable parts. Problem-solving is a crucial skill for any programmer.</li>
+            <li><b>Functions and Modularization:</b>Dive into the world of functions, reusable blocks of code that enhance the readability and maintainability of your programs.</li>
+            <li><b>Data Structures:</b>Explore fundamental data structures such as arrays, lists, and dictionaries, and understand how they impact the efficiency of your programs.</li>
+            <li><b>Introduction to Object-Oriented Programming (OOP):</b>Get acquainted with the principles of OOP, an approach that organizes code into objects, fostering better organization, and code reuse.</li>
+        </ol>
+        <p>By the end of this, you will have laid a solid foundation in programming, empowering you to take on more advanced languages and technologies with confidence. Whether you're a beginner or someone looking to reinforce your programming fundamentals, these courses are your gateway to the limitless possibilities of coding. Let's embark on this exciting journey together!</p>
+        <center><h2>Courses</h2></center>
+        <input type="checkbox" id="toggle">
+  <label for="toggle" class="toggle-label">Explore</label>
+  <div class="course">
+      <center><h3>CS50: Introduction to Computer Science</h3></center>
+    <p>This is CS50x , Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. The on-campus version of CS50x , CS50, is Harvard's largest course. 
+
+Students who earn a satisfactory score on 9 problem sets (i.e., programming assignments) and a final project are eligible for a certificate. This is a self-paced course–you may take CS50x on your own schedule.</p>
+<br> <p><b>Cost: Free</b></p>
+<center><button class="cs50" onclick="cs50()">Access to Course</button></center>
+<script>function cs50(){
+    var url="https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science";
+    window.open(url, '_blank');}</script>
+
+    <center><h3>100 Days of Code: The Complete Python Pro Bootcamp for 2023</h3></center>
+    <p>Welcome to the 100 Days of Code - The Complete Python Pro Bootcamp, the only course you need to learn to code with Python. With over 500,000 5 STAR reviews and a 4.8 average, my courses are some of the HIGHEST RATED courses in the history of Udemy!  
+
+100 days, 1 hour per day, learn to build 1 project per day, this is how you master Python.
+
+At 60+ hours, this Python course is without a doubt the most comprehensive Python course available anywhere online. Even if you have zero programming experience, this course will take you from beginner to professional. We'll take you step-by-step through engaging video tutorials and teach you everything you need to know to succeed as a Python developer.
+
+The course includes over 65 hours of HD video tutorials and builds your programming knowledge while making real-world Python projects.</p>
+<br> <p><b>Instructor: Angela Yu</b></p><p><b>Cost: $24.99</b></p>
+<center><button class = "pythonboot" onclick="addToCart('100 Days of Code: The Complete Python Pro Bootcamp for 2023', 24.99)"> Add to Cart</button></center>
+<script>
+function addToCart(itemName, itemPrice) {
+    // Retrieve cart items from localStorage
+        let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Add the new item to the cart
+        cartItems.push({ name: itemName, price: itemPrice });
+
+        // Save the updated cart back to localStorage
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+}
+</script>
+  </div>
+    </div>
+        
+    </body>
+</html>

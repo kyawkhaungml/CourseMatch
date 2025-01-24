@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CourseMatch Cart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href = "stylemenu.css">
+    </head>
+    <body>
+        <div class="top">
+            <h1>CourseMatch</h1>
+            <div class="navigate">
+                <table class="ntable">
+                    <tr>
+                        <td class = "ndata">
+                            <a href = "about.html">About</a>
+                        </td>
+                        <td class = "ndata">
+                            <a href = "menu.html">Menu</a>
+                        </td>
+                        <td class = "ndata">
+                            <a href = "cart.html">Cart</a>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+        <center><h2>Cart</h2></center>
+        <div class = "cart">
+        
+        <center><ul id="cart-items"></ul></center>
+        <p>Total: $<span id="total">0.00</span></p>
+        <button onclick="clearCart()">Clear Cart</button> <button onclick="checkout()">Check Out</button>
+        </div>
+
+  <script>
+    // Load cart items from localStorage on page load
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    let total = 0;
+
+    function updateCart() {
+        const cartItemsElement = document.getElementById("cart-items");
+        const totalElement = document.getElementById("total");
+
+        // Clear previous items
+        cartItemsElement.innerHTML = "";
+
+        // Update cart items and calculate total
+        total = 0;
+        cartItems.forEach(item => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+            cartItemsElement.appendChild(listItem);
+            total += item.price;
+        });
+
+        // Update total in the HTML
+        totalElement.textContent = total.toFixed(2);
+    }
+
+     // Function to clear the cart
+    function clearCart() {
+        // Remove the 'cart' item from localStorage
+        localStorage.removeItem('cart');
+
+        // Clear the cartItems array
+        cartItems = [];
+
+        // Update the cart display
+        updateCart();
+    }
+
+    // Call updateCart when the page loads to display existing items
+    updateCart();
+
+    function checkout(){
+        window.location.href = "complete.html";
+    }
+  </script>
+
+    </body>
+</html>

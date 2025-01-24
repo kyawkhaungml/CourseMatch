@@ -1,0 +1,127 @@
+body{
+    background-color: whitesmoke;
+    font-family: serif;
+}
+
+.top > h1{
+    color:black;
+    text-align: left;
+    font-size: 30px;
+    /*inline-block is used to not skip to a new line*/
+    display: inline-block;
+    
+}
+
+.top{
+    font-family:serif;
+    background-color: lightgray;
+    height: 50px;
+    margin: -15px;
+    padding: 20px;
+    
+}
+
+.navigate{
+    text-align: right;
+    /*inline-flex is used to not skip to a new line*/
+    display: inline-flex;
+    margin-left: 1000px;
+}
+
+.ndata > a{
+    font-size: 20px;
+    margin-left: 20px;
+    color: black;
+}
+
+
+.csgrid{
+    display: grid;
+    padding: 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: auto auto auto;
+}
+
+.cs-item{
+    background-color: lightgray;
+    font-size: 20px;
+    padding: 20px;
+    height: 100px;
+    text-align: center;
+}
+
+.cs-item:hover{
+    background-color: darkgray;
+}
+
+.cs-item > button{
+    margin-top: 50px;
+}
+
+.content{
+    padding: 30px;
+    margin-left: 350px;
+    margin-right: 350px;
+    font-size: large;
+    background-color: lightgray;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the label to look like a button */
+.toggle-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Style the content to be hidden by default */
+.course {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* When the checkbox is checked, expand the content */
+input[type="checkbox"]:checked + .toggle-label + .course {
+  max-height: 1000px; /* You can use a large value or 'unset' for dynamic content */
+}
+
+.welcome{
+    padding: 30px;
+    margin-left: 350px;
+    margin-right: 350px;
+    font-size: large;
+    background-color: lightgray;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cart{
+    padding: 30px;
+    margin-left: 350px;
+    margin-right: 350px;
+    font-size: large;
+    background-color: lightgray;
+}
+
+.complete{
+    padding: 30px;
+    margin-top: 200px;
+    margin-left: 350px;
+    margin-right: 350px;
+    font-size: large;
+    background-color: lightgray;
+}
