@@ -36,4 +36,4 @@ CourseMatch was built using the following technologies:
 To run the CourseMatch project locally:
 1. Clone this repository:
    ```bash
-   git clone [repository-url]
+   git clone [https://github.com/kyawkhaungml/CourseMatch]
